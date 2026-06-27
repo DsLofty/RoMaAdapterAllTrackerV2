@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+bash recipes/run_stage_a_risk_100seq.sh
+bash recipes/export_final_stage_adapter_data_kubric_multisource_seed123_deepcorr_risk_accept_stride1_300seq_v1.sh
+bash recipes/relabel_final_stage_adapter_multisource_seed123_deepcorr_accept_strong_v2_300seq.sh
+bash recipes/export_final_stage_adapter_data_davis_seed123_deepcorr_risk_accept_stride1_v1.sh
+bash recipes/relabel_final_stage_adapter_davis_seed123_deepcorr_accept_strong_v2.sh
+bash recipes/train_final_stage_adapter_kubric_multisource_seed123_deepcorr_accept_strong_v2_joint_fullft_valsplit_300seq_ep60.sh
+bash recipes/eval_final_stage_risk_accept_davis_seed123_deepcorr_strong_v2_joint_fullft_valsplit_300seq_ep60_conservative.sh epoch040

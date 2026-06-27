@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*~
+
+# Logs and generated outputs
+logs*/
+*.log
+analysis_outputs/
+final_stage_adapter_data/
+final_stage_adapter_eval_outputs/
+roma_recurrent_adapter_eval_outputs/
+memory_requery_oracle_outputs/
+
+# VOT outputs and packages
+results/
+sequences/
+*.zip
+
+# Large model/data artifacts
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.npz
+*.npy
+
+# Keep placeholder docs for expected checkpoint directories
+!ckpt/README.md
+!checkpoints_final_stage_adapter/README.md

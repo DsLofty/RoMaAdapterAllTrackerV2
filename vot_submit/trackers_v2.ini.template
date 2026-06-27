@@ -1,0 +1,5 @@
+[RoMaAdapterAllTrackerV2]
+label = RoMaAdapterAllTrackerV2
+command = roma_adapter_folder_tracker_v2
+protocol = folderpython
+paths = /path/to/release_roma_adapter_v2_candidate:/path/to/release_roma_adapter_v2_candidate/vot_submit
